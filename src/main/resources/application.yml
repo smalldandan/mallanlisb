@@ -16,7 +16,7 @@ spring:
 
 # Mybatis 配置
 mybatis:
-  mapper-locations: classpath:/mybatis/mapper/*.xml
+  mapper-locations: classpath:/mybatis/mapper/*.xml ,/mybatis/mapper/extend/*.xml
 
 logging:
   level:

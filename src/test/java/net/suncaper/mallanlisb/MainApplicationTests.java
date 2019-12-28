@@ -5,6 +5,9 @@ import net.suncaper.mallanlisb.common.domain.Book;
 import net.suncaper.mallanlisb.mapper.AdminMapper;
 import net.suncaper.mallanlisb.mapper.BookMapper;
 import net.suncaper.mallanlisb.mapper.ImgFileMapper;
+import net.suncaper.mallanlisb.mapper.extend.AdminMapperExtend;
+import net.suncaper.mallanlisb.mapper.extend.BookMapperExtend;
+import net.suncaper.mallanlisb.mapper.extend.ImgFileMapperExtend;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,11 +19,11 @@ import java.util.List;
 class MainApplicationTests {
 
     @Autowired
-    AdminMapper adminMapper;
+    AdminMapperExtend adminMapper;
     @Autowired
-    BookMapper bookMapper;
+    BookMapperExtend bookMapper;
     @Autowired
-    ImgFileMapper imgFileMapper;
+    ImgFileMapperExtend imgFileMapper;
 
     @Test
     void contextLoads() {
@@ -49,6 +52,14 @@ class MainApplicationTests {
 
         }*/
         bookMapper.insertBatch(bookList);
+    }
+
+    @Test
+    public void testSelectAllBook(){
+        List<Book> books = bookMapper.selectByExample(null);
+        for (Book book : books) {
+            System.out.println(book);
+        }
     }
 
 

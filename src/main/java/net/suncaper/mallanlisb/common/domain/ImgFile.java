@@ -92,4 +92,19 @@ public class ImgFile {
     public void setRemark(String remark) {
         this.remark = remark == null ? null : remark.trim();
     }
+
+    @Override
+    public String toString() {
+        return "ImgFile{" +
+                "id=" + id +
+                ", bookid=" + bookid +
+                ", savename='" + savename + '\'' +
+                ", originalname='" + originalname + '\'' +
+                ", contenttype='" + contenttype + '\'' +
+                ", path=" + path +
+                ", size=" + size +
+                ", createtime=" + createtime +
+                ", remark='" + remark + '\'' +
+                '}';
+    }
 }

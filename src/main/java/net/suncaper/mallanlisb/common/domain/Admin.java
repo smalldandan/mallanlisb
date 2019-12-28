@@ -61,4 +61,15 @@ public class Admin {
     public void setRemark(String remark) {
         this.remark = remark == null ? null : remark.trim();
     }
+
+    @Override
+    public String toString() {
+        return "Admin{" +
+                "id=" + id +
+                ", loginname='" + loginname + '\'' +
+                ", password='" + password + '\'' +
+                ", lastlogintime=" + lastlogintime +
+                ", remark='" + remark + '\'' +
+                '}';
+    }
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.suncaper.mallanlisb.mapper.extend.ImgFileMapperExtend">
+  <resultMap id="BaseResultMap" type="net.suncaper.mallanlisb.common.domain.ImgFile">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="bookId" jdbcType="INTEGER" property="bookid" />
+    <result column="saveName" jdbcType="VARCHAR" property="savename" />
+    <result column="originalName" jdbcType="VARCHAR" property="originalname" />
+    <result column="contentType" jdbcType="VARCHAR" property="contenttype" />
+    <result column="path" jdbcType="INTEGER" property="path" />
+    <result column="size" jdbcType="BIGINT" property="size" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  </mapper>
